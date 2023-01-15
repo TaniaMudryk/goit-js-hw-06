@@ -1,9 +1,9 @@
-const inputTextRef = document.querySelector("#text");
-const inputControlRef = document.querySelector("#font-size-control");
-inputControlRef.oninput = function () {
-    console.log(this.value)
-    inputTextRef.style.fontSize = inputControlRef.value + 'px';
-}
+const spanText = document.querySelector("#text");
+const inputSizeControl = document.querySelector("#font-size-control");
+
+inputSizeControl.oninput = function (event) {
+  spanText.style.fontSize = `${event.target.value}px`;
+};
 
 /*
 Напиши скрипт, який реагує на зміну значення input#font-size-control (подія input) і змінює інлайн-стиль span#text, 
@@ -12,4 +12,4 @@ inputControlRef.oninput = function () {
 <input id="font-size-control" type="range" min="16" max="96" />
 <br />
 <span id="text">Abracadabra!</span>
-*/ 
+*/
